@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/46df4abcba.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: 'Arimo', sans-serif;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        background: rgb(235, 232, 232);
+        padding: 10px 15px;
+    }
+
+    .navbar-nav {
+        list-style: none;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        padding: 5px;
+    }
+
+    .search {
+        position: absolute;
+        right: 1%;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+        margin-right: 16px;
+        font-weight: bold;
+    }
+
+    .navbar input {
+        border: none;
+        margin: 2px;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .btn {
+        -webkit-border-radius: 7;
+        -moz-border-radius: 7;
+        border-radius: 7px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 12spx;
+        background: #8474a1;
+        padding: 6px 15px 6px 15px;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background: #9199c2;
+        background-image: -webkit-linear-gradient(top, #9199c2, #8097a6);
+        background-image: -moz-linear-gradient(top, #9199c2, #8097a6);
+        background-image: -ms-linear-gradient(top, #9199c2, #8097a6);
+        background-image: -o-linear-gradient(top, #9199c2, #8097a6);
+        background-image: linear-gradient(to bottom, #9199c2, #8097a6);
+        text-decoration: none;
+    }
+
+    .header {
+        text-align: center;
+        padding: 20px 2px 12px 2px;
+    }
+
+    h1 {
+        margin: 8px;
+    }
+
+    .input-container {
+        text-align: center;
+        padding: 36px 2px 40px 2px;
+    }
+
+    .input-container input {
+        margin: 17px 2px 3px 2px;
+        padding: 5px 8px 5px 8px;
+        width: 50%;
+    }
+
+    hr {
+        width: 80%;
+        margin: auto;
+    }
+
+    .task-container {
+        display: flex;
+        flex-direction: column;
+        padding: 28px 2px 28px 2p;
+        margin-left: 11%;
+    }
+
+    .task-list {
+        list-style: none;
+        margin: 16px 2px 16px 2px;
+        padding: 5px 2px 5px 2px;
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+
+    .task-list li {
+        margin: 6px 19px 11px 6px;
+        padding: 10px 5px 10px 12px;
+        border: solid 1px;
+        width: 87%;
+    }
+
+    .task-heading {
+        background-color: rgb(219, 213, 213);
+        width: 88%;
+        margin: 27px 2px 6px 2px;
+        padding: 16px
+    }
+
+    i{
+        float: right;
+        margin-right: 12px;
+    }
+    .task-comp{
+        float: right;
+        margin-right: 15px;
+        margin-top: 2px;
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">TO-DO</a>
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+        </ul>
+        <form class="search">
+            <input type="search" placeholder="Search" aria-label="Search">
+            <button class="btn" type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="header">
+        <h1>TO-DO!</h1>
+        <h3>Save You Daily Task Here!</h3>
+    </div>
+    <hr>
+    <div class="input-container">
+        <h3>Enter a Task:</h3>
+        <input type="text" id="todo-text">
+        <button type="submit" class="btn" id="save-btn">Save</button>
+    </div>
+    <hr>
+
+    <div class="task-container">
+        <h2 class="task-heading">Saved Task!</h2>
+        <ul class="task-list" id="todo-list">
+           
+        </ul>
+        <p>*If your task is Completed then click on checkbox*</p>
+    </div>
+    <hr>
+    <div class="task-container">
+        <h2 class="task-heading">Completed Task</h2>
+        <ul class="task-list" id="comp-todo">
+          
+        </ul>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
